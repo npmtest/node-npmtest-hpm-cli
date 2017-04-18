@@ -5,7 +5,7 @@
 <tspan x="10" y="42"></tspan>
 <tspan x="10" y="58">node_modules</tspan>
 <tspan x="10" y="74">└─┬ hpm-cli@2.0.1 </tspan>
-<tspan x="10" y="90">  ├─┬ args@2.5.0 </tspan>
+<tspan x="10" y="90">  ├─┬ args@2.6.0 </tspan>
 <tspan x="10" y="106">  │ ├── camelcase@4.1.0 </tspan>
 <tspan x="10" y="122">  │ ├── minimist@1.2.0 </tspan>
 <tspan x="10" y="138">  │ ├── pkginfo@0.4.0 </tspan>

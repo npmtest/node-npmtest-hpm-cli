@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-hpm-cli/hpm-cli/api.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-hpm-cli/node_modules/hpm-cli/api.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-hpm-cli">npmtest-hpm-cli (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-hpm-cli/hpm-cli/api.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-hpm-cli/node_modules/hpm-cli/api.js</span></h1>
     <h2>
         
         Statements: <span class="metric">39.74% <small>(31 / 78)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-hpm-cli/hpm-cli/</a> » api.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-hpm-cli/node_modules/hpm-cli/</a> &#187; api.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -464,11 +466,11 @@ const recast = require('recast')
 const fileName = `${os.homedir()}/.hyper.js`
 const oldConf = `${os.homedir()}/.hyperterm.js`
 &nbsp;
-<span class="fstat-no" title="function not covered">function getPluginName(item) {</span>
-<span class="cstat-no" title="statement not covered">  if (item.type === 'TemplateLiteral') {</span>
-<span class="cstat-no" title="statement not covered">    return item.quasis[0].value.raw</span>
+<span class="fstat-no" title="function not covered" >function getPluginName(item) {</span>
+<span class="cstat-no" title="statement not covered" >  if (item.type === 'TemplateLiteral') {</span>
+<span class="cstat-no" title="statement not covered" >    return item.quasis[0].value.raw</span>
   }
-<span class="cstat-no" title="statement not covered">  return item.value</span>
+<span class="cstat-no" title="statement not covered" >  return item.value</span>
 }
 &nbsp;
 let fileContents
@@ -479,90 +481,90 @@ let localPlugins
 try {
   fileContents = fs.readFileSync(fileName, 'utf8')
 &nbsp;
-<span class="cstat-no" title="statement not covered">  parsedFile = recast.parse(fileContents)</span>
+<span class="cstat-no" title="statement not covered" >  parsedFile = recast.parse(fileContents)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  const expression = parsedFile.program.body[0].expression</span>
-<span class="cstat-no" title="statement not covered">  const properties = (expression &amp;&amp; expression.right &amp;&amp; expression.right.properties) || []</span>
-<span class="cstat-no" title="statement not covered">  plugins = properties.find(property =&gt; {</span>
-<span class="cstat-no" title="statement not covered">    return property.key.name === 'plugins'</span>
+<span class="cstat-no" title="statement not covered" >  const expression = parsedFile.program.body[0].expression</span>
+<span class="cstat-no" title="statement not covered" >  const properties = (expression &amp;&amp; expression.right &amp;&amp; expression.right.properties) || []</span>
+<span class="cstat-no" title="statement not covered" >  plugins = properties.find(property =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return property.key.name === 'plugins'</span>
   }).value.elements
 &nbsp;
-<span class="cstat-no" title="statement not covered">  localPlugins = properties.find(property =&gt; {</span>
-<span class="cstat-no" title="statement not covered">    return property.key.name === 'localPlugins'</span>
+<span class="cstat-no" title="statement not covered" >  localPlugins = properties.find(property =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return property.key.name === 'localPlugins'</span>
   }).value.elements
 } catch (err) {
-  <span class="missing-if-branch" title="if path not taken">I</span>if (err.code !== 'ENOENT') { // ENOENT === !exists()
-<span class="cstat-no" title="statement not covered">    throw err</span>
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (err.code !== 'ENOENT') { // ENOENT === !exists()
+<span class="cstat-no" title="statement not covered" >    throw err</span>
   }
 }
 &nbsp;
 function exists() {
-  <span class="missing-if-branch" title="if path not taken">I</span>if (fs.existsSync(oldConf)) {
-<span class="cstat-no" title="statement not covered">    console.log(chalk.yellow(`Warning: ${oldConf} should be ${fileName}`))</span>
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (fs.existsSync(oldConf)) {
+<span class="cstat-no" title="statement not covered" >    console.log(chalk.yellow(`Warning: ${oldConf} should be ${fileName}`))</span>
   }
   return fileContents !== undefined
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function isInstalled(plugin, locally) {</span>
-<span class="cstat-no" title="statement not covered">  const array = locally ? localPlugins : plugins</span>
-<span class="cstat-no" title="statement not covered">  if (array &amp;&amp; Array.isArray(array)) {</span>
-<span class="cstat-no" title="statement not covered">    return array.find(entry =&gt; <span class="cstat-no" title="statement not covered">getPluginName(entry) === plugin)</span> !== undefined</span>
+<span class="fstat-no" title="function not covered" >function isInstalled(plugin, locally) {</span>
+<span class="cstat-no" title="statement not covered" >  const array = locally ? localPlugins : plugins</span>
+<span class="cstat-no" title="statement not covered" >  if (array &amp;&amp; Array.isArray(array)) {</span>
+<span class="cstat-no" title="statement not covered" >    return array.find(entry =&gt; <span class="cstat-no" title="statement not covered" >getPluginName(entry) === plugin)</span> !== undefined</span>
   }
-<span class="cstat-no" title="statement not covered">  return false</span>
+<span class="cstat-no" title="statement not covered" >  return false</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function save() {</span>
-<span class="cstat-no" title="statement not covered">  return pify(fs.writeFile)(fileName, recast.print(parsedFile).code, 'utf8')</span>
+<span class="fstat-no" title="function not covered" >function save() {</span>
+<span class="cstat-no" title="statement not covered" >  return pify(fs.writeFile)(fileName, recast.print(parsedFile).code, 'utf8')</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function existsOnNpm(plugin) {</span>
-<span class="cstat-no" title="statement not covered">  plugin = plugin.split('#')[0]</span>
-<span class="cstat-no" title="statement not covered">  return npmName(plugin).then(available =&gt; {</span>
-<span class="cstat-no" title="statement not covered">    if (available) {</span>
-<span class="cstat-no" title="statement not covered">      const err = new Error(`${plugin} not found on npm`)</span>
-<span class="cstat-no" title="statement not covered">      err.code = 'NOT_FOUND_ON_NPM'</span>
-<span class="cstat-no" title="statement not covered">      throw err</span>
+<span class="fstat-no" title="function not covered" >function existsOnNpm(plugin) {</span>
+<span class="cstat-no" title="statement not covered" >  plugin = plugin.split('#')[0]</span>
+<span class="cstat-no" title="statement not covered" >  return npmName(plugin).then(available =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (available) {</span>
+<span class="cstat-no" title="statement not covered" >      const err = new Error(`${plugin} not found on npm`)</span>
+<span class="cstat-no" title="statement not covered" >      err.code = 'NOT_FOUND_ON_NPM'</span>
+<span class="cstat-no" title="statement not covered" >      throw err</span>
     }
   })
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function install(plugin, locally) {</span>
-<span class="cstat-no" title="statement not covered">  const array = locally ? localPlugins : plugins</span>
-<span class="cstat-no" title="statement not covered">  return new Promise((resolve, reject) =&gt; {</span>
-<span class="cstat-no" title="statement not covered">    existsOnNpm(plugin).then(() =&gt; {</span>
-<span class="cstat-no" title="statement not covered">      if (isInstalled(plugin, locally)) {</span>
-<span class="cstat-no" title="statement not covered">        return reject(`${plugin} is already installed`)</span>
+<span class="fstat-no" title="function not covered" >function install(plugin, locally) {</span>
+<span class="cstat-no" title="statement not covered" >  const array = locally ? localPlugins : plugins</span>
+<span class="cstat-no" title="statement not covered" >  return new Promise((resolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    existsOnNpm(plugin).then(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (isInstalled(plugin, locally)) {</span>
+<span class="cstat-no" title="statement not covered" >        return reject(`${plugin} is already installed`)</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      array.push(recast.types.builders.literal(plugin))</span>
-<span class="cstat-no" title="statement not covered">      save().then(resolve).catch(err =&gt; <span class="cstat-no" title="statement not covered">reject(err))</span></span>
+<span class="cstat-no" title="statement not covered" >      array.push(recast.types.builders.literal(plugin))</span>
+<span class="cstat-no" title="statement not covered" >      save().then(resolve).catch(err =&gt; <span class="cstat-no" title="statement not covered" >reject(err))</span></span>
     }).catch(err =&gt; {
-<span class="cstat-no" title="statement not covered">      if (err.code === 'NOT_FOUND_ON_NPM') {</span>
-<span class="cstat-no" title="statement not covered">        reject(err.message)</span>
+<span class="cstat-no" title="statement not covered" >      if (err.code === 'NOT_FOUND_ON_NPM') {</span>
+<span class="cstat-no" title="statement not covered" >        reject(err.message)</span>
       } else {
-<span class="cstat-no" title="statement not covered">        reject(err)</span>
+<span class="cstat-no" title="statement not covered" >        reject(err)</span>
       }
     })
   })
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function uninstall(plugin) {</span>
-<span class="cstat-no" title="statement not covered">  return new Promise((resolve, reject) =&gt; {</span>
-<span class="cstat-no" title="statement not covered">    if (!isInstalled(plugin)) {</span>
-<span class="cstat-no" title="statement not covered">      return reject(`${plugin} is not installed`)</span>
+<span class="fstat-no" title="function not covered" >function uninstall(plugin) {</span>
+<span class="cstat-no" title="statement not covered" >  return new Promise((resolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (!isInstalled(plugin)) {</span>
+<span class="cstat-no" title="statement not covered" >      return reject(`${plugin} is not installed`)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    const index = plugins.findIndex(entry =&gt; <span class="cstat-no" title="statement not covered">getPluginName(entry) === plugin)</span></span>
-<span class="cstat-no" title="statement not covered">    plugins.splice(index, 1)</span>
-<span class="cstat-no" title="statement not covered">    save().then(resolve).catch(err =&gt; <span class="cstat-no" title="statement not covered">reject(err))</span></span>
+<span class="cstat-no" title="statement not covered" >    const index = plugins.findIndex(entry =&gt; <span class="cstat-no" title="statement not covered" >getPluginName(entry) === plugin)</span></span>
+<span class="cstat-no" title="statement not covered" >    plugins.splice(index, 1)</span>
+<span class="cstat-no" title="statement not covered" >    save().then(resolve).catch(err =&gt; <span class="cstat-no" title="statement not covered" >reject(err))</span></span>
   })
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function list() {</span>
-<span class="cstat-no" title="statement not covered">  if (Array.isArray(plugins)) {</span>
-<span class="cstat-no" title="statement not covered">    return plugins.map(plugin =&gt; <span class="cstat-no" title="statement not covered">getPluginName(plugin))</span>.join('\n')</span>
+<span class="fstat-no" title="function not covered" >function list() {</span>
+<span class="cstat-no" title="statement not covered" >  if (Array.isArray(plugins)) {</span>
+<span class="cstat-no" title="statement not covered" >    return plugins.map(plugin =&gt; <span class="cstat-no" title="statement not covered" >getPluginName(plugin))</span>.join('\n')</span>
   }
-<span class="cstat-no" title="statement not covered">  return false</span>
+<span class="cstat-no" title="statement not covered" >  return false</span>
 }
 &nbsp;
 module.exports.exists = exists
@@ -573,11 +575,10 @@ module.exports.uninstall = uninstall
 module.exports.list = list
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 12 2017 00:37:14 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 15:56:04 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
