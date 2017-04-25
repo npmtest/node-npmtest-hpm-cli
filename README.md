@@ -1,6 +1,6 @@
 # npmtest-hpm-cli
 
-#### test coverage for  [hpm-cli (v2.0.1)](https://github.com/zeit/hpm#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-hpm-cli.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-hpm-cli) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-hpm-cli.svg)](https://travis-ci.org/npmtest/node-npmtest-hpm-cli)
+#### basic test coverage for  [hpm-cli (v2.0.1)](https://github.com/zeit/hpm#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-hpm-cli.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-hpm-cli) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-hpm-cli.svg)](https://travis-ci.org/npmtest/node-npmtest-hpm-cli)
 
 #### A plugin manager for Hyper.app
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-hpm-cli/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-hpm-cli/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-hpm-cli/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-hpm-cli/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-hpm-cli/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-hpm-cli/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-hpm-cli/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-hpm-cli/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-hpm-cli/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-hpm-cli/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-hpm-cli/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-hpm-cli/build/coverage.html/index.html)
 
